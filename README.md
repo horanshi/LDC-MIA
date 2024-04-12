@@ -15,6 +15,7 @@ pip install -r requirements.txt
 ```
 - Create the following four folders to store the **target model**, **reference model**, **shadow model** and **mia classifie**r respectively.
 ```
+cd LDC-MIA
 mkdir private_model
 mkdir reference_model
 mkdir shadow_model
@@ -22,10 +23,11 @@ mkdir mia_classifier
 ```
 - Create folders to store the **mask** for each part of the data
 ```
+cd LDC-MIA
 mkdir data
 mkdir data/hidden
 ```
-### Example(CIFAR 10, WideResNet )
+### Example(CIFAR 10, WideResNet)
 - **STEP 1**: Train the target model
 ```
 python train_private_model.py --dump_path ./private_model --mask_path none --architecture wrn28_10 --dataset cifar10 --optimizer sgd,lr=cos:0.01,momentum=0.9 --batch_size 64 --epochs 25
