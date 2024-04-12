@@ -322,7 +322,7 @@ def neighbor_cos_similarity(params, train_neighbor, heldout_neighbor, reference_
     similarity = torch.mm(cos_tensor, cos_tensor.T)
 
     # Calculate the number of neighbors
-    similarity = similarity[:, len(train_neighbor) + len(heldout_neighbor):]  # Can't use the unknown members and non-members to calculate the neighbor
+    similarity = similarity[:, len(train_neighbor) + len(heldout_neighbor):]
     train_neighbor_result = []  # Store number of each member's neighbors whose cos similarity are higher than the threshold
     heldout_neighbor_result = []  # Store number of each non-member's neighbors whose cos similarity are higher than the threshold
 
