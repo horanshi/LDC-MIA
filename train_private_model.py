@@ -135,7 +135,7 @@ if __name__ == '__main__':
         path = "data/"
         torch.save(known_masks['public'], path + params.dataset + "public.pth")
         torch.save(known_masks['private'], path + params.dataset + "private.pth")
-        torch.save(known_masks['shadow1'], path + params.dataset + "private.pth")
+        torch.save(known_masks['shadow1'], path + params.dataset + "shadow.pth")
 
         torch.save(hidden_masks['private']['train'], path + "hidden/" + params.dataset + "train.pth")
         torch.save(hidden_masks['private']['heldout'], path + "hidden/" + params.dataset + "heldout.pth")
